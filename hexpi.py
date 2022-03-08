@@ -1,5 +1,3 @@
-import timeit
-
 def S(j, n):
     s = 0.0
     k = 0
@@ -29,20 +27,4 @@ def hexpi(n):
     hexdigits = '0123456789abcdef'
     for i in range(1, n):
         output += hexdigits[pi(i)]
-    return output
-
-def pibin(n):
-    if n % 4 == 0:
-        return pi(n//4) // 8
-    elif n % 4 == 1:
-        return pi(n//4) // 4 % 2
-    elif n % 4 == 2:
-        return pi(n//4) // 2 % 2
-    elif n % 4 == 3:
-        return pi(n//4) % 2
-
-def taubinstring(n):
-    output = '110.'
-    for i in range(5, n+2):
-        output += str(pibin(i))
     return output
